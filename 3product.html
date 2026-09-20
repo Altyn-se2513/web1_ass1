@@ -558,6 +558,36 @@
 
     updateButtons();
   })();
+
+
+  
+  function openBookFromUrl() {
+      const bookId =
+          decodeURIComponent(window.location.hash.slice(1));
+
+      if (!bookId) return;
+
+      const book = document.getElementById(bookId);
+
+      if (book && book.matches('details')) {
+          book.open = true;
+
+          book.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+          });
+      }
+  }
+
+window.addEventListener(
+    'hashchange',
+    openBookFromUrl
+);
+
+openBookFromUrl();
   </script>
+
+
+
 </body>
 </html>

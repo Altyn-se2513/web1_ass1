@@ -1155,3 +1155,22 @@ mark.hl-orange { background: #fdba74; }
   color: #0b2545;
   text-decoration: underline;
 }
+
+
+@media (hover: none) {
+    .gallery-item .caption {
+        inset: auto 0 0;
+        opacity: 1;
+        padding: 12px;
+        background: rgba(11, 37, 69, 0.85);
+    }
+}
+
+.table-scroll {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.table-scroll table {
+    min-width: 600px;
+}
